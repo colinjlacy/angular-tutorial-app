@@ -1,0 +1,11 @@
+{
+  "name": "invoice-webapp",
+  "version": "1.0.0",
+  "dependencies": {
+    "angularjs": "git://github.com/angular/bower-angular.git",
+    "angular-route": "git://github.com/angular/bower-angular-route.git",
+    "jquery": "~2.1.4",
+    "bootstrap": "~3.3.4"
+  },
+  "devDependencies": {}
+}
