@@ -46,12 +46,12 @@ module.exports = function(grunt) {
                 }
             },
             scripts: {
-                files: ['!lib/*.js', '**/*.js'],
+                files: ['app/*/*.js'],
                 tasks: ['jshint']
             }
         }
     });
 
-    grunt.registerTask('default', ['connect', 'less', 'jshint', 'wiredep', 'watch']);
+    grunt.registerTask('default', ['connect', 'less', 'jshint', 'watch']);
 
 };

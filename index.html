@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<title>Angular Invoices</title>
+
+	<!--Styles-->
+	<link rel="stylesheet" href="css/bootstrap.css"/>
+	<link rel="stylesheet" href="css/bootstrap-theme.css"/>
+
+</head>
+<body>
+
+<main class="container">
+	<div class="row">
+		<div class="col-sm-12" role="tabpanel">
+			<ul class="nav nav-tabs" role="tablist">
+				<li role="presentation" class="active"><a href="#account" data-toggle="tab">Account</a></li>
+				<li role="presentation"><a href="#services" data-toggle="tab">Services</a></li>
+				<li role="presentation"><a href="#payments" data-toggle="tab">Payments</a></li>
+			</ul>
+			<div class="tab-content">
+				<div role="tabpanel" class="tab-pane active" id="account">
+					<form>
+						<div class="form-group">
+							<label class="control-label" for="company">Company</label>
+							<select name="company" id="company" class="form-control">
+								<option value="boeing">Boeing</option>
+								<option value="jetblue">JetBlue</option>
+								<option value="lockheed">Lockheed Martin</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label class="control-label" for="date-applied">Date Applied</label>
+							<input type="text" id="date-applied" placeholder="mm/dd/yyyy" class="form-control"/>
+						</div>
+						<div class="form-group">
+							<label class="control-label" for="account-supervisor">Account Supervisor</label>
+							<input type="text" id="account-supervisor" class="form-control"/>
+						</div>
+						<div class="form-group">
+							<label class="control-label">Invoice Type</label><br/>
+							<label class="control-label"><input type="radio" name="invoice-type" value="single-payment"/> Single Payment</label><br/>
+							<label class="control-label"><input type="radio" name="invoice-type" value="ongoing-payment"/> Ongoing Payment</label>
+						</div>
+						<div id="single-payment-inputs">
+							<h3>Single Payment Settings</h3>
+							<div class="form-group">
+								<label class="control-label" for="date-due">Date Due</label>
+								<input type="text" id="date-due" placeholder="mm/dd/yyyy" class="form-control"/>
+							</div>
+							<div class="form-group">
+								<label class="control-label">Collection Methods</label>
+								<input type="text" id="date-due" placeholder="mm/dd/yyyy" class="form-control"/>
+							</div>
+							<div class="form-group">
+								<label for="overdue">Overdue after</label>
+								<div class="input-group">
+									<input type="text" id="overdue" class="form-control"/>
+									<div class="input-group-btn">
+										<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Action <span class="caret"></span></button>
+										<ul class="dropdown-menu dropdown-menu-right" role="menu">
+											<li><a href="#">Days</a></li>
+											<li><a href="#">Weeks</a></li>
+											<li><a href="#">Months</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label">Overdue Rate</label><br/>
+								<label class="control-label"><input type="radio" name="overdue-type" value="percentage"/> Percentage</label><br/>
+								<label class="control-label"><input type="radio" name="overdue-type" value="dollar-amount"/> Dollar Amount</label>
+							</div>
+							<div class="form-group">
+								<label for="overdue-charge" class="control-label">Overdue Charge</label>
+								<input class="form-control" type="text" name="overdue-charge" id="overdue-charge"/>
+							</div>
+							<div class="form-group">
+								<label for="compounds" class="control-label"><input type="checkbox" name="compounts" id="compounds"/> Compounds?</label>
+							</div>
+							<div class="form-group">
+								<label for="compound-rate">Compounds Every</label>
+								<div class="input-group">
+									<input type="text" id="compound-rate" class="form-control"/>
+									<div class="input-group-btn">
+										<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Action <span class="caret"></span></button>
+										<ul class="dropdown-menu dropdown-menu-right" role="menu">
+											<li><a href="#">Days</a></li>
+											<li><a href="#">Weeks</a></li>
+											<li><a href="#">Months</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="ongoing-payment-inputs">
+							<h3>Ongoing Payment Settings</h3>
+							<div class="form-group">
+								<label class="control-label" for="date-due">Start Due</label>
+								<input type="text" id="start-date" placeholder="mm/dd/yyyy" class="form-control"/>
+							</div>
+							<div class="form-group">
+								<label class="control-label" for="date-due">End Due</label>
+								<input type="text" id="end-date" placeholder="mm/dd/yyyy" class="form-control"/>
+							</div>
+
+						</div>
+					</form>
+				</div>
+				<div role="tabpanel" class="tab-pane" id="services">
+					Services
+				</div>
+				<div role="tabpanel" class="tab-pane" id="payments">
+					Payments
+				</div>
+			</div>
+		</div>
+	</div>
+</main>
+
+<!--libraries-->
+<script src="lib/jquery.js"></script>
+<script src="lib/bootstrap.js"></script>
+<script src="lib/angular.js"></script>
+<script src="lib/angular-route.js"></script>
+
+</body>
+</html>
